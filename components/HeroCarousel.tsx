@@ -75,7 +75,21 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
         touchStartX.current = null;
       }}
     >
-      <div className="relative aspect-[4/5] w-full sm:aspect-[16/9] lg:aspect-[21/9]">
+      {/*
+        All hero banners are authored at 16:9 (1919×1080) with the full
+        title/CTA baked into the graphic edge-to-edge — there's no "safe"
+        margin for the HTML text overlay to sit in without covering some of
+        it. So the container ratio here is a deliberate compromise, not a
+        crop mistake: `aspect-[4/3]` on mobile keeps enough box height for
+        the overlay text (eyebrow + heading + description + button) to
+        render without being clipped by this section's `overflow-hidden`,
+        while cropping far less of the banner's width than the old 4:5 did.
+        From `sm` up there's enough box height regardless, so the ratio
+        matches the source exactly (16:9) and the image is shown with zero
+        crop — that also fixes the old `lg:aspect-[21/9]`, which was short
+        enough to cut off the banner's own bottom feature strip.
+      */}
+      <div className="relative aspect-square w-full sm:aspect-video">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
@@ -96,18 +110,28 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
             />
             <div
               aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-t from-brand-950/90 via-brand-950/40 to-brand-950/10 sm:bg-gradient-to-r sm:from-brand-950/85 sm:via-brand-950/40 sm:to-transparent"
+              className="absolute inset-0 sm:bg-gradient-to-r sm:from-brand-950/85 sm:via-brand-950/40 sm:to-transparent"
             />
-            <div className="container-page absolute inset-0 flex items-end pb-10 sm:items-center sm:pb-0">
-              <div className="max-w-xl">
+            <div className="container-page absolute inset-0 flex items-end pb-6 sm:items-center sm:pb-0">
+              {/*
+                The banners already carry their own bold, edge-to-edge
+                graphic text, so a soft gradient alone left this overlay
+                text fighting with it for legibility (the two visually
+                "merged"). A solid card panel guarantees contrast no matter
+                what's behind it — needed on mobile where the shorter box
+                leaves little breathing room; from `sm` up the box is tall
+                enough that the plain gradient reads cleanly on its own, as
+                before.
+              */}
+              <div className="max-w-xl rounded-2xl bg-brand-950/85 p-4 backdrop-blur-sm sm:rounded-none sm:bg-transparent sm:p-0 sm:backdrop-blur-0">
                 <p className="eyebrow text-gold-400">{slide.eyebrow}</p>
-                <h2 className="mt-3 text-3xl font-extrabold leading-[1.1] text-white sm:text-4xl lg:text-5xl">
+                <h2 className="mt-2 text-2xl font-extrabold leading-[1.1] text-white sm:mt-3 sm:text-4xl lg:text-5xl">
                   {slide.title}
                 </h2>
-                <p className="mt-4 text-base leading-relaxed text-brand-100 sm:text-lg">
+                <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-brand-100 sm:mt-4 sm:line-clamp-none sm:text-lg">
                   {slide.description}
                 </p>
-                <Link href={slide.ctaHref} className="btn-primary mt-6">
+                <Link href={slide.ctaHref} className="btn-primary mt-4 sm:mt-6">
                   {slide.ctaLabel}
                 </Link>
               </div>
