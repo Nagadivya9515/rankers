@@ -1,0 +1,77 @@
+[
+  {
+    "id": "kp-sir",
+    "name": "KP Sir (Krishna Prakash)",
+    "shortName": "KP Sir",
+    "title": "\"Mr. GATE\" — Civil & Environmental Engineering",
+    "subject": "Civil & Environmental Engineering",
+    "yearsExperience": 22,
+    "ownRank": "Trained GATE AIR 1 & ESE AIR 1",
+    "priorAffiliations": ["ex-ACE Academy", "ex-Unacademy"],
+    "credentials": [
+      "22+ years of senior faculty experience",
+      "Trained a GATE All India Rank 1 and an ESE All India Rank 1",
+      "Widely regarded as one of India's few dedicated GATE Environmental Engineering (EVS) educators",
+      "Has taught 300+ live batches",
+      "Best Teacher Award and Asian Education Icon awardee"
+    ],
+    "bio": [
+      "Known to generations of GATE aspirants simply as \"Mr. GATE\", KP Sir has spent over two decades turning Civil and Environmental Engineering — often the most-feared subjects on the GATE syllabus — into a strength for his students.",
+      "Before joining RankersPro, he taught at ACE Academy and Unacademy, where his structured, first-principles approach to Environmental Engineering built a loyal following among aspirants nationwide.",
+      "He has personally mentored a GATE AIR 1 and an ESE AIR 1, and continues to lead RankersPro's flagship GATE & ESE Civil batches."
+    ],
+    "initials": "KP",
+    "photoAlt": "Portrait of KP Sir (Krishna Prakash), RankersPro Civil and Environmental Engineering faculty",
+    "photoSrc": "/images/faculty/kp-sir.webp"
+  },
+  {
+    "id": "rp-sir",
+    "name": "RP Sir (Rajendra Prasad)",
+    "shortName": "RP Sir",
+    "title": "SOM, Structural Analysis & Transportation Engineering",
+    "subject": "Strength of Materials, Structural Analysis, Transportation Engineering",
+    "yearsExperience": 14,
+    "ownRank": "GATE AIR 179",
+    "priorAffiliations": ["ex-ACE Academy", "ex-Unacademy"],
+    "credentials": [
+      "14+ years of teaching experience",
+      "GATE All India Rank 179 in his own right",
+      "Selected as an Assistant Executive Engineer (AEE) in 2011",
+      "M.Tech in Structural Engineering, NIT Tiruchirappalli",
+      "Has taught 200+ live batches and mentored 1,00,000+ students"
+    ],
+    "bio": [
+      "RP Sir brings a rare combination to the classroom: he cleared GATE with AIR 179 and went on to be selected as an AEE, so every concept he teaches in Structural Analysis, SOM, and Transportation Engineering is grounded in what actually clears the exam and what holds up on the job.",
+      "An M.Tech graduate in Structures from NIT Tiruchirappalli, he taught previously at ACE Academy and Unacademy before joining RankersPro to lead the structures and transportation modules across the GATE & ESE and state AE/JE batches.",
+      "Over 1,00,000 students have learned Structural Analysis and Transportation Engineering from his lectures."
+    ],
+    "initials": "RP",
+    "photoAlt": "Portrait of RP Sir (Rajendra Prasad), RankersPro Structural and Transportation Engineering faculty",
+    "photoSrc": "/images/faculty/rp-sir.webp"
+  },
+  {
+    "id": "dr-sandeep-sir",
+    "name": "Dr. Sandeep Sir",
+    "shortName": "Dr. Sandeep Sir",
+    "title": "\"Maths Mantrik\" — Engineering Mathematics",
+    "subject": "Engineering Mathematics",
+    "yearsExperience": 22,
+    "ownRank": "Doctorate holder & published textbook author",
+    "priorAffiliations": ["ex-TIME", "ex-UpGRAD"],
+    "credentials": [
+      "22+ years of teaching experience",
+      "Doctorate (Ph.D.) holder in Mathematics",
+      "Published author of an Engineering Mathematics textbook",
+      "Has taught 300+ live batches",
+      "Mentors 1,00,000+ aspirants across every stream on Engineering Mathematics"
+    ],
+    "bio": [
+      "Nicknamed \"Maths Mantrik\" by generations of students, Dr. Sandeep Sir has spent over 22 years making Engineering Mathematics — the one subject common to every GATE, ESE, and PSU aspirant — approachable, fast, and exam-ready.",
+      "A doctorate holder and published textbook author, he previously taught at TIME and UpGRAD before joining RankersPro, where he now anchors the Engineering Mathematics module across every batch and every branch.",
+      "His structured shortcuts and problem-pattern method have been used by over 1,00,000 aspirants preparing for GATE, ESE, and state-level engineering exams."
+    ],
+    "initials": "DS",
+    "photoAlt": "Portrait of Dr. Sandeep Sir, RankersPro Engineering Mathematics faculty",
+    "photoSrc": "/images/faculty/dr-sandeep-sir.webp"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "app-android",
+    "platform": "android",
+    "label": "Android",
+    "store": "Google Play",
+    "url": "#"
+  },
+  {
+    "id": "app-windows",
+    "platform": "windows",
+    "label": "Windows",
+    "store": "Windows App",
+    "url": "#"
+  },
+  {
+    "id": "app-mac",
+    "platform": "mac",
+    "label": "Mac",
+    "store": "Mac App",
+    "url": "#"
+  }
+]

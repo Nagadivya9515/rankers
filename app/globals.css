@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*
+     * System font stacks — no external font requests, so there is nothing
+     * to fetch at build or runtime. This keeps the site fully static
+     * (buildable with zero network access) and avoids render-blocking
+     * webfont requests, which helps the Lighthouse performance target in
+     * the SRS. Swap these for next/font/local + real brand font files
+     * whenever RankersPro finalizes a licensed typeface.
+     */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-sans font-extrabold tracking-tight text-brand-900;
+  }
+}
+
+@layer components {
+  /* Elegant serif accent used for taglines, e.g. "Your Success, Our Mission" */
+  .tagline {
+    @apply font-serif italic font-medium text-gold-600;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /*
+   * Button system — three levels (primary/secondary/outline), each with
+   * the same micro-interaction: a slight lift + shadow bloom on hover,
+   * and a slight press-down on click. Keeps every CTA on the site feeling
+   * like one consistent, deliberate system rather than ad-hoc styling.
+   */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-bold uppercase tracking-wide transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-gold text-brand-950 shadow-card hover:bg-gold-400 hover:shadow-elevated focus-visible:ring-gold-500;
+  }
+
+  .btn-secondary {
+    @apply btn border-2 border-white/70 bg-transparent text-white hover:bg-white hover:text-brand-700 hover:shadow-elevated focus-visible:ring-white;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-brand-500 bg-transparent text-brand-600 hover:bg-brand-500 hover:text-white hover:shadow-card-hover focus-visible:ring-brand-500;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-gold-600;
+  }
+
+  /*
+   * Depth system, layer 3 → 4: a resting card surface, and the
+   * interactive variant that lifts + glows gold on hover. Use
+   * `.card-surface` for static cards (legal page callouts, stat tiles)
+   * and `.card-interactive` for anything clickable (batch/faculty/topper
+   * cards) so hover behavior stays consistent site-wide.
+   */
+  .card-surface {
+    @apply rounded-xl border border-brand-100 bg-white shadow-card;
+  }
+
+  .card-interactive {
+    @apply card-surface transition-all duration-300 hover:-translate-y-1 hover:border-gold-200 hover:shadow-card-hover;
+  }
+
+  /* Glass surface — used sparingly: sticky panels, floating device mockups. */
+  .surface-glass {
+    @apply border border-white/15 bg-white/10 shadow-floating backdrop-blur-md;
+  }
+
+  /*
+   * Consistent keyboard-focus ring for plain text links (nav items, footer
+   * links, inline "watch video" style links) that don't go through .btn.
+   * Without this, focus falls back to the browser's default outline —
+   * inconsistent with the rest of the site's gold focus-visible ring.
+   * `-dark` variant is for links sitting on brand-green/black surfaces
+   * (footer, dark nav panels) where a cream ring-offset would look like a
+   * bug rather than a ring.
+   */
+  .link-focus {
+    @apply rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-cream;
+  }
+
+  .link-focus-dark {
+    @apply rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-950;
+  }
+}
+
+@layer utilities {
+  /*
+   * Subtle line-grid texture, layered under gradient/blob backgrounds for
+   * a premium SaaS feel. `.bg-grid` (light lines) for dark/green
+   * surfaces, `.bg-grid-brand` (brand-green lines) for cream/white
+   * surfaces. Always paired with low opacity on the wrapping element —
+   * see AppEcosystemSection / Hero for usage — so it reads as texture,
+   * not as a checkerboard.
+   */
+  .bg-grid {
+    background-image: theme("backgroundImage.grid");
+    background-size: 40px 40px;
+  }
+
+  .bg-grid-brand {
+    background-image: theme("backgroundImage.grid-brand");
+    background-size: 40px 40px;
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "study-planner",
+    "title": "Personalized Study Planner",
+    "description": "A day-by-day schedule built around your target exam, your current syllabus coverage, and how many hours you actually have — not a generic timetable.",
+    "icon": "calendar"
+  },
+  {
+    "id": "weekly-review-calls",
+    "title": "Weekly 1:1 Review Calls",
+    "description": "A direct phone call every week with your mentor to walk through progress, adjust the plan, and answer what's blocking you before it costs another week.",
+    "icon": "phone"
+  },
+  {
+    "id": "error-notebook-audit",
+    "title": "Error / Lag Notebook Audit",
+    "description": "Every mistake and guessed answer goes into a lag notebook — your mentor reviews it directly, the same method RP Sir used on his way to AIR 179.",
+    "icon": "notebook"
+  },
+  {
+    "id": "test-analysis-2x-rule",
+    "title": "Test Analysis, the \"2x Rule\" Way",
+    "description": "Analysis time should be double your attempt time. Your mentor sits with you on that breakdown so no wrong answer goes unexamined.",
+    "icon": "clock"
+  },
+  {
+    "id": "weak-area-tracking",
+    "title": "Weak-Area & Revision Priority Tracking",
+    "description": "High-weightage subjects get 3–5 revision passes, everything else gets at least 2 — your mentor tracks the count so nothing important is under-revised.",
+    "icon": "target"
+  },
+  {
+    "id": "career-guidance-access",
+    "title": "Career-Path Guidance, Included",
+    "description": "Not sure GATE is the right track, or which state exam to prioritize? Your mentor helps you decide, backed by RankersPro's Career Guidance program.",
+    "icon": "compass"
+  }
+]
